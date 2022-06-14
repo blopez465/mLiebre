@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7c28aaf964.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+    <body>
+        <header class="main-header">
+           <div class="main-header-topbar"> 
+               <img class="logo" src="/images/logo-mercado-liebre.svg">
+                <form action="/" method="post" class = "search-bar">   
+                    <label for="search"></label>  
+                    <input type="text" id="search" value="Buscar productos, marcas" name="busqueda">
+                    <button type="submit"><i class="fas fa-search" class="lupa"></i></button>
+                </form> 
+                   
+                <div>
+                    <p class="centrado"><i class="fas fa-hand-holding-usd icono"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+                    </div>
+            </div>
+
+
+            <div class="main-navbar">
+                <ul class = "navbar">
+                    <li> <a href="#">Ofertas</a></li>
+                    <li> <a href="#">Tiendas Oficiales</a> </li>
+                    <li> <a href="/vender">Vender</a></li>
+                    <li> <a href="#">Ayuda</a></li>
+
+                </ul>
+    
+                <ul class="login-bar">
+                    <li><a href= "/register">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
+                    <li><a href= "/login">Ingresá</a> <i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href= "#">Mis compras</a> <i class="fas fa-shopping-basket"></i></li>     
+                </ul>
+            </div>
+            <div  class="burger-menu">
+                <i id="burger" class="fas fa-bars"></i>
+            </div>
+            <div id="banner">
+                <img src="/images/img-home-banner.jpg">
+            </div>
+        </header>
+        <main class="main-formularios">
+                <form class="form-vender" action="/crear-producto" method="post">
+                    <div class="normal">
+                        <label>Nombre del producto:</label>
+                        <input class="input" type="text" name="nombreProducto" >
+                    </div>
+                    <div class="normal">
+                        <label>Precio:</label>
+                        <input class="input" type="text" name="precioProducto" >
+                    </div>
+                    <div class="normal">
+                        <label>Categoría</label>
+                        <select class="input" name="categoriaProducto">
+                            <option value="electro">Electro</option>
+                            <option value="indumentariaF">Ropa de mujer</option>
+                            <option value="indumentariaM">Ropa de hombre</option>
+                            <option value="juguetes">Juguetería</option>
+                            <option value="hogar">Artículos para el hogar</option>
+                            <option value="otros">Otra</option>
+                        </select>
+                    </div>
+                    <div class="normal">
+                        <label>Ciudad</label>
+                        <select class="input" name="ubicacion">
+                            <option value="baires">Buenos Aires</option>
+                            <option value="mza">Mendoza</option>
+                            <option value="salta">Salta</option>
+                            <option value="nqn">Neuquén</option>
+                            <option value="jujuy">Jujuy</option>
+                            <option value="ctes">Corrientes</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>¿Está en oferta? </label>
+                        <input type="radio" name="productoEnOferta" >
+                    </div>
+                    <div class="normal">
+                        <label>Descripción</label>
+                        <textarea class="input" name="descripcion"></textarea>
+                    </div>
+                    <button class="enviar" type="submit"><p>Enviar</p></button>
+                    <button class="enviar" type="reset"><p>Cancelar</p></button>
+                </form>
+            </main>
+            <footer>
+                <section class="footer-navbar">
+                    
+                    <i id="icono" class="fas fa-credit-card"></i>
+                    <h5>Pagá con tarjeta de crédito</h5>
+                    <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+                    
+                    <i id="icono" class="fas fa-gift"></i>
+                    <h5>Envío gratis desde $2.500</h5>
+                    <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+                    
+                    <i id="icono" class="fas fa-user-shield"></i>
+                    <h5>Seguridad de principio a fin</h5>
+                    <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+                    <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+    
+                </section>
+            </footer>
+            
+        </body>
+    </html>
