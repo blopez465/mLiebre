@@ -44,8 +44,9 @@ p {
     background-color: white;
     color: #666;
     border: 1px solid black;
-    justify-content: center;
-    display: inline-block;
+    display: block;
+    margin: auto;
+    width: fit-content;
 }
 
 .search-bar i{
@@ -72,11 +73,15 @@ h4 {
     text-align: left;
 }
 
-.art-box h5 {
+.descripcion {
     font-size: 16px;
     font-weight: normal;
     display: none;
+    width: 100%;
+    transition: all 1s;
 }
+
+
 #burger{
     border-radius: 5px;
     background-color: #03264C;
@@ -117,7 +122,9 @@ footer h5{
     font-size: 2em;
     text-align: center;
     margin-bottom: 10px;
+    transition: color 0.5s;
 }
+
 article img {
     width: 90%;
     box-sizing: border-box;
@@ -136,13 +143,15 @@ main {
     box-shadow: none;
     box-sizing: border-box;
     text-align: center;
-    
+    transition: all 1s;
 }
+
 .art-box { 
     border-top: 1px solid #ebebeb;
     box-sizing: border-box;
     padding: 10px;
     display: flex; 
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     position: relative;
@@ -160,7 +169,9 @@ article i{
     height: 30px;
     right: 20px;
     background-color: white;
+    transition: all 1s;
 }
+
 
 .precios {
     line-height: auto;
@@ -244,9 +255,7 @@ article i{
     text-align: center;
     
 }
-.enviar:hover{
-    background-color: #3c5977;
-}
+
 .form-vender{
     background-color: #ebebeb;
     padding: 20px;
@@ -286,12 +295,13 @@ article i{
         text-align: end;
         font-size: 10px;
     }
-    .art-box h5{
+    .descripcion{
         display: block;
         text-align: left;
         width: 100%;
         color: #666;
         font-size: 12px;
+        
     }
     .contenedor-padre{
         display: flex;
@@ -306,12 +316,9 @@ article i{
         max-width: 280px;
         margin: 10px;
         padding: 10px;
-        transition: all 500ms;
+        
     }
-    .articulo:hover{
-        background-color: #ebebeb;
-        border-radius: 5%;
-    }
+    
    .art-box i{
         margin-top: -65px;
    }
@@ -352,8 +359,10 @@ article i{
         max-width: 240px;
         margin: 10px;
     }
-    .art-box h5{
+    .descripcion{
         font-size: 13px;
+        text-decoration: none;
+        font-weight: 60;
     }
     .main-navbar{
         display: flex;
@@ -410,6 +419,7 @@ article i{
 
 }
 @media (min-width:1200px){
+   
     .main-header-topbar,
     .main-navbar{
         max-width: 1200px;
@@ -435,6 +445,13 @@ article i{
     }
     .articulo{
         max-width: 260px;
+        box-shadow: none;
+        
+    }
+    .articulo:hover{
+        box-shadow: 0px 0px 10px rgb(100,100,100);
+        background-color: #ebebeb;
+        border-radius: 5%;
     }
     .footer-navbar{
         display: flex;
@@ -450,5 +467,27 @@ article i{
         justify-content: center;
         text-align: center;
         margin: 0%;
+    }
+    .enviar:hover{
+        background-color: #0022AA;
+    }
+    #icono:hover{
+        color: #0022AA;
+    }
+    
+    .articulo:hover i{
+        transform: rotate(-90deg);
+    }
+    .descripcion{
+        color: white;
+        display: none;
+    }
+    .articulo:hover .descripcion{
+        display: block;
+        text-align: left;
+        width: 100%;
+        color: rgb(102, 102, 102);
+        font-size: 12px;
+        
     }
 }
