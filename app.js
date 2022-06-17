@@ -17,7 +17,7 @@ app.get('/vender',(req,res) => {
     res.sendFile(path.join(__dirname,'./views/vender.html'))
 })
 let puerto = process.env.PORT || 3000;
-app.listen(puerto|| 3000,()=>{
+app.listen(puerto || 3000,()=>{
 
     console.log('Servidor corriendo en el puerto ' + puerto)
 })
